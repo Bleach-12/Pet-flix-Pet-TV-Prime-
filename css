@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa 100% da altura da janela de visualização */
+    margin: 0; /* Remove margens padrão */
+    background-color: #23238E; /* Cor de fundo */
+    overflow: hidden; /* Evita rolagem da página */
+}
+
+.centered-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Largura do botão */
+    height: 150px; /* Altura do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 50%; /* Torna o botão redondo */
+    outline: none; /* Remove o contorno padrão */
+    padding: 0; /* Remove o padding interno */
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o alinhamento para o centro exato */
+    transition: transform 0.8s ease; /* Transição suave ao alterar o tamanho */
+}
+
+.centered-button:hover {
+    transform: translate(-50%, -50%) scale(3.16); /* Aumenta o botão em 10% quando o cursor passa sobre ele */
+}
+
+.button-icon {
+    width: 100%; /* Ocupa toda a largura do botão */
+    height: 100%; /* Ocupa toda a altura do botão */
+    object-fit: cover; /* Ajusta a imagem para cobrir o botão */
+    border-radius: 50%; /* Segue o formato redondo do botão */
+}
+
+#video-container {
+    display: none; /* Inicialmente escondido */
+    position: absolute; /* Posiciona o contêiner do vídeo de forma absoluta */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o alinhamento para o centro exato */
+    background: #000; /* Cor de fundo do contêiner do vídeo */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 50vw; /* Largura de 50% da largura da tela */
+    max-width: 600px; /* Largura máxima */
+    height: 50vh; /* Altura de 50% da altura da tela */
+    z-index: 1; /* Define a camada do contêiner do vídeo */
+}
+
+#video {
+    width: 100%; /* Largura total do contêiner */
+    height: 100%; /* Altura total do contêiner */
+}
+
+#voice-control {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Posiciona o botão no topo da tela */
+    top: -125px; /* Ajusta a posição do botão para mais acima do topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o alinhamento para o centro exato */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    padding: 0; /* Remove o padding interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 50%; /* Torna o botão redondo */
+    outline: none; /* Remove o contorno padrão */
+    background: transparent; /* Fundo transparente */
+    z-index: 2; /* Garante que o botão de voz fique acima do vídeo */
+}
+
+.voice-icon {
+    width: 80px; /* Largura do ícone dentro do botão */
+    height: 80px; /* Altura do ícone dentro do botão */
+    border-radius: 50%; /* Torna o ícone redondo */
+    object-fit: cover; /* Ajusta a imagem ao tamanho do botão */
+}
